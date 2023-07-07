@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>ParseDialogflowRequest</Name>
+            </Step>
+            <Step>
+                <Condition>(google.dialogflow.fulfillment.tag != "login")</Condition>
+                <Name>OAuthv2</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <Flows>
+        <Flow name="login">
+            <Request>
+                <Step>
+                    <Name>BasicAuthentication</Name>
+                </Step>
+                <Step>
+                    <Name>JS-login</Name>
+                </Step>
+                <Step>
+                    <Condition>(df.login-response-status = true)</Condition>
+                    <Name>AM-SetOAuthRequest</Name>
+                </Step>
+                <Step>
+                    <Condition>(df.login-response-status = true)</Condition>
+                    <Name>OAuthv2Generate</Name>
+                </Step>
+                <Step>
+                    <Condition>(df.login-response-status = true)</Condition>
+                    <Name>AM-RemoveOAuthRequest</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>SetDialogflowResponse-Login</Name>
+                </Step>
+            </Response>
+            <Condition>(google.dialogflow.fulfillment.tag = "login")</Condition>
+        </Flow>
+        <Flow name="medical-diagnosis">
+            <Request>
+                <Step>
+                    <Name>AM-SetDiagnosisPrompt</Name>
+                </Step>
+                <Step>
+                    <Name>AM-SetModelRequest</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>SetDialogflowResponse-MedicalDiagnosis</Name>
+                </Step>
+            </Response>
+            <Condition>(google.dialogflow.fulfillment.tag = "medical-diagnosis")</Condition>
+        </Flow>
+    </Flows>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <HTTPProxyConnection>
+        <BasePath>/v1/dentalai</BasePath>
+    </HTTPProxyConnection>
+    <RouteRule name="default">
+        <Condition>(google.dialogflow.fulfillment.tag = "medical-diagnosis")</Condition>
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>

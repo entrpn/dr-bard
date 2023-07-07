@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="AM-RemoveOAuthRequest">
+    <DisplayName>AM-RemoveOAuthRequest</DisplayName>
+    <Remove>
+        <FormParams>
+            <FormParam name="grant_type"/>
+            <FormParam name="username"/>
+            <FormParam name="password"/>
+        </FormParams>
+    </Remove>
+    <Set>
+        <Payload contentType="application/json">{}</Payload>
+    </Set>
+</AssignMessage>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 continueOnError="false" enabled="true" name="OAuthv2">
+    <DisplayName>OAuthv2</DisplayName>
+    <Operation>VerifyAccessToken</Operation>
+    <AccessToken>google.dialogflow.session.parameters.token</AccessToken>
+</OAuthV2>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="AM-SetModelRequest">
+    <DisplayName>AM-SetModelRequest</DisplayName>
+    <Set>
+        <!--<Payload contentType="application/json" variablePrefix="@" variableSuffix="#">-->
+        <Payload contentType="application/json">
+  {
+    "instances": [
+        {
+            "context": "",
+            "examples": [],
+            "messages": [
+                {
+                    "author": "user",
+                    "content": "{df.prompt}"
+                }
+            ]
+        }
+    ],
+    "parameters": {
+        "temperature": 0.2,
+        "maxOutputTokens": 256,
+        "topP": 0.8,
+        "topK": 40
+    }
+}
+  </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>
