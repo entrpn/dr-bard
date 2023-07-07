@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 continueOnError="false" enabled="true" name="OAuthv2Generate">
+    <DisplayName>OAuthv2Generate</DisplayName>
+    <Operation>GenerateAccessToken</Operation>
+    <ExpiresIn>1800000</ExpiresIn>
+    <!-- 30 minutes -->
+    <SupportedGrantTypes>
+        <GrantType>client_credentials</GrantType>
+    </SupportedGrantTypes>
+    <Attributes>
+        <Attribute name="medical_history" ref="df.login-response-medical-history" display="true"/>
+    </Attributes>
+    <GenerateResponse enabled="false"/>
+</OAuthV2>

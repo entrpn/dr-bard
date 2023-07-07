@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BasicAuthentication continueOnError="false" enabled="true" name="BasicAuthentication">
+    <DisplayName>BasicAuthentication</DisplayName>
+    <Source>request.header.Authorization</Source>
+    <User ref="df.key"/>
+    <Password ref="df.secret"/>
+    <Operation>Decode</Operation>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+</BasicAuthentication>

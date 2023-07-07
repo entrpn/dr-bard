@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="AM-SetDiagnosisPrompt">
+    <DisplayName>AM-SetDiagnosisPrompt</DisplayName>
+    <AssignVariable>
+        <Name>df.prompt</Name>
+        <Template>Pretend you are a medical practitioner and a patient told you that, '{google.dialogflow.session.parameters.medical-issue}'. The patient's medical record says the patient {accesstoken.medical_history}. What can they do to relieve the discomfort?</Template>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

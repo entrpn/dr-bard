@@ -1,0 +1,30 @@
+<APIProxy revision="40" name="dentalAI">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1687549756327</CreatedAt>
+    <LastModifiedAt>1687549756327</LastModifiedAt>
+    <BasePaths>/v1/dentalai</BasePaths>
+    <Policies>
+        <Policy>ParseDialogflowRequest</Policy>
+        <Policy>JS-login</Policy>
+        <Policy>SetDialogflowResponse-Login</Policy>
+        <Policy>SetDialogflowResponse-MedicalDiagnosis</Policy>
+        <Policy>AM-SetModelRequest</Policy>
+        <Policy>AM-SetDiagnosisPrompt</Policy>
+        <Policy>BasicAuthentication</Policy>
+        <Policy>OAuthv2Generate</Policy>
+        <Policy>AM-SetOAuthRequest</Policy>
+        <Policy>AM-RemoveOAuthRequest</Policy>
+        <Policy>OAuthv2</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://login.js</Resource>
+        <Resource>properties://user.properties</Resource>
+    </Resources>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

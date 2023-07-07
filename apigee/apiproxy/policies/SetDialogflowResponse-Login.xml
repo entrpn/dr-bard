@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SetDialogflowResponse continueOnError="false" enabled="true" name="SetDialogflowResponse-Login">
+    <DisplayName>SetDialogflowResponse-Login</DisplayName>
+    <DialogflowVersion>CX</DialogflowVersion>
+    <Source>message</Source>
+    <Parameters>
+        <Parameter name="login-response-status">
+            <Ref>df.login-response-status</Ref>
+        </Parameter>
+        <Parameter name="login-response-first-name">
+            <Ref>df.login-response-first-name</Ref>
+        </Parameter>
+        <Parameter name="login-response-medical-history">
+            <Ref>df.login-response-medical-history</Ref>
+        </Parameter>
+        <Parameter name="login-response-token">
+            <Ref>apigee.access_token</Ref>
+        </Parameter>
+    </Parameters>
+</SetDialogflowResponse>

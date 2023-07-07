@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SetDialogflowResponse continueOnError="false" enabled="true" name="SetDialogflowResponse-MedicalDiagnosis">
+    <DisplayName>SetDialogflowResponse-MedicalDiagnosis</DisplayName>
+    <DialogflowVersion>CX</DialogflowVersion>
+    <Source>message</Source>
+    <Parameters>
+        <Parameter name="medical-diagnosis-response">
+            <JSONPath>$.predictions[0].candidates[0].content</JSONPath>
+        </Parameter>
+    </Parameters>
+</SetDialogflowResponse>

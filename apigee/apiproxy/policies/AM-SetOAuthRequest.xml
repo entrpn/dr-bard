@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="AM-SetOAuthRequest">
+    <DisplayName>AM-SetOAuthRequest</DisplayName>
+    <Set>
+        <FormParams>
+            <FormParam name="grant_type">client_credentials</FormParam>
+            <FormParam name="username">{df.key}</FormParam>
+            <FormParam name="password">{df.secret}</FormParam>
+        </FormParams>
+    </Set>
+</AssignMessage>
