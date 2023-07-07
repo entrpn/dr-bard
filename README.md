@@ -11,7 +11,7 @@ This demo serves as a deployable reference implementation of a chatbot developed
 * A [Google Cloud Storage](https://cloud.google.com/storage) bucket is used to serve up the sample UI
 
 ## Deployment
-Details on how the solution was deployed are found in the directories of tge individual components:
-2. [apigee](./apigee)
-3. [dialogflow](./dialogflow)
-4. [frontend](./frontend)
+Details on how the solution was deployed are found in the directories of the individual components:
+1. [apigee](./apigee)
+2. [dialogflow](./dialogflow)
+3. [frontend](./frontend)

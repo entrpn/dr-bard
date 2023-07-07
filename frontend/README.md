@@ -8,7 +8,7 @@ The frontend component of this demo, which consists of a GCS bucket that [hosts 
 
 ## Deployment Steps
 ```
-# cd into this fold
+# cd into this folder
 cd ./frontend
 
 # copy over files to bucket
