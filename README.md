@@ -1,7 +1,7 @@
 # Dr Bard
 This demo serves as a deployable reference implementation of a chatbot developed using [Dialogflow CX](https://cloud.google.com/dialogflow/cx/docs/basics), [PaLM API](https://cloud.google.com/vertex-ai/docs/generative-ai/start/quickstarts/api-quickstart) and [Apigee](https://cloud.google.com/apigee/docs/api-platform/get-started/what-apigee)
 
-.gif of sample interaction with demo found below:
+Demo of sample interaction with demo found below:
 ![Demo](demo.gif)
 
 ## Architecture
